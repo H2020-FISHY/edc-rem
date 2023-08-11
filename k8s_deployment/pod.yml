@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poli-remediator
+  labels:
+    app: poli-remediator
+spec:
+  terminationGracePeriodSeconds: 1
+  containers:
+    - name: fishy-remediator
+      image: fishy-remediator
+      imagePullPolicy: Never
+      stdin: true
+      tty: true
+      env:
+        - name: API_ENDPOINT
+          value: "localhost"
+    - name: refeng
+      image: refeng
+      imagePullPolicy: Never
+      env:
+        - name: API_ENDPOINT
+          value: "localhost"
+    - name: secap
+      image: secap
+      imagePullPolicy: Never
+    - name: nsf-catalogue
+      image: nsf-catalogue
+      imagePullPolicy: Never
+
+# https://linchpiner.github.io/k8s-multi-container-pods.html
+
+# imagePullPolicy set to Never is needed when using
+# local images without tags.
+
+# terminationGracePeriodSeconds set to 1 s instead
+# of default 30 s to make the pod deletion process faster.
+# This is particularly useful for testing prurposes.
+# After 1 s the pod is forcefully terminated without
+# waiting for graceful shutdown.
+
+# https://stackoverflow.com/questions/71216061/changing-terminationgraceperiodseconds-value-doesnt-getting-effected-during-new
+

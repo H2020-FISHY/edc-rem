@@ -1,0 +1,3 @@
+iterate_on domains
+    add_dns_policy for iteration_element of type 'block_all_queries'
+enditeration

@@ -1,0 +1,20 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4358957200 -> 4358955184 [label="statements:0" arrowtail=diamond dir=both]
+4358955184 -> 4358955280 [label="functionExpression" arrowtail=diamond dir=both]
+4358955280[label="{:VarReferenceOrString|+value:str='nop'\l}"]
+4358955184[label="{:Execute|}"]
+4358957200[label="{:Recipe|}"]
+
+}

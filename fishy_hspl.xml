@@ -1,0 +1,17 @@
+<hspl-list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://fishy-project.eu/hspl hspl.xsd" xmlns="http://fishy-project.eu/hspl">
+	<reaction id="reaction1">
+		<enabling-conditions>
+			<threshold>
+				<subject type="ip_address">12.12.12.12</subject>
+				<value>1</value>
+				<period>1</period>
+				<time>Hour</time>
+			</threshold>
+		</enabling-conditions>
+		<hspl id="hspl1">
+			<subject type="ip_address">12.12.12.12</subject>
+			<object>Subnet1.1</object>
+			<action>is not authorized to access</action>
+		</hspl>
+	</reaction>
+</hspl-list>

@@ -1,0 +1,30 @@
+{
+    "SecurityControls": {
+        "iptables": {
+            "capabilities": ["level_4_filtering"],
+            "args": ["src_ip", "dst_ip", "dst_port", "proto", "chain"],
+            "optional_args": ["src_port"],
+            "args_details": {
+                "proto": {
+                    "options": ["tcp", "udp"]
+                }
+            }
+        },
+        "generic_level_7_filter": {
+            "capabilities": ["level_7_filtering"],
+            "args": ["payload"],
+            "optional_args": ["src_ip", "dst_ip", "src_port", "dst_port"],
+            "args_details": {}
+        },
+        "generic_network_traffic_monitor": {
+            "capabilities": ["level_4_monitor"],
+            "args": [],
+            "optional_args": ["src_ip", "dst_ip", "src_port", "dst_port", "proto"],
+            "args_details": {
+                "proto": {
+                    "options": ["tcp", "udp"]
+                }
+            }
+        }
+    }
+}

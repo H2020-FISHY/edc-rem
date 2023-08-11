@@ -1,0 +1,5 @@
+igraph==0.10.2
+pycairo==1.23.0
+textx==3.0.0
+requests==2.27.1
+pika==1.3.1

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Enforce IP ban
+-->
+<hspl-list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://fishy-project.eu/hspl hspl.xsd">
+    <reaction id="reaction1">
+        <enabling-conditions>
+            <threshold>
+                <subject type="ip_address">12.12.12.12</subject>
+                <value>1</value>
+                <period>1</period>
+                <time>Hour</time>
+            </threshold>
+        </enabling-conditions>
+    </reaction>
+</hspl-list>

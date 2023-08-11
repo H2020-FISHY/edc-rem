@@ -1,0 +1,3 @@
+iterate_on impacted_nodes
+    add_honeypot with 'apache_vulnerability'
+enditeration

@@ -1,0 +1,17 @@
+{
+    "id": "1d85ba8c-cc15-4f5b-b149-0f84c4dbf104",
+    "task_type": "reports.create.cef",
+    "details": {
+        "id": "2458ad20-5a0e-4f7e-b931-7b8ce3ce30a4",
+        "device_product": "XL-SIEM",
+        "device_version": "1.0",
+        "event_name": "Exploit attempt",
+        "device_event_class_id": "Unknown",
+        "severity": "5",
+        "extensions_list": "{"ts": "2023-07-20 13: 38: 17", "id": "cf10feecfcf9476a82d1a70564a7d82d", "relEvents": "[270211eeaa8a0242ac110002af247322
+        ]", "pluginId": "70000", "pluginName": "cyber-monitor", "pluginSid": "100104", "backlogId": "ff91e38566d642bd87ee39c01a02004b", "src": "10.17.150.9", "spt": "0", "shost": "00000000", "smac": "UmVzcG9uc2UgY29kZTogNDAx", "suser": "TWFjaGluZTogMmJjN2I4OGZjNWY4IHdkaXNw", "dst": "0.0.0.0", "dpt": "0", "dhost": "00000000", "sidName": "RXhwbG9pdCBhdHRlbXB0", "risk": "8", "reliability": "8", "proto": "6", "description": "Exploit attempt", "userData1": "TWV0aG9kOiBFVA==", "userData2": "TmV0OiAxMC4xNw==", "userData3": "UmVxdWVzdDogSFRUUC8xLg==", "userData4": "UmVzcG9uc2UgY29kZTogNDAx", "userData5": "U2l6ZTogOTU3OA==", "userData6": "TWFjaGluZTogMmJjN2I4OGZjNWY4IHdkaXNw", "userData7": "TWVzc2FnZTogbWFsaWNpb3VzdXJs", "userData8": "SONAE", "userData9": "Exploit attempt"}",
+        "pilot": "SONAE",
+        "updated_at": "2023-07-20T13:59:51.139Z",
+        "created_at": "2023-07-20T13:59:51.139Z"
+    }
+}

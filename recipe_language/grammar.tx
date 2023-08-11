@@ -1,0 +1,113 @@
+//############################################################################################################
+//## ATTENTION: When adding a new grammar rule remember to add it to the FunctionCall abstract grammar rule ##
+//############################################################################################################
+
+Recipe:
+    statements*=Statement
+;
+
+VarReference:
+    value=ID
+;
+
+VarReferenceOrString:
+    (value=VarReference | value=STRING)
+;
+
+Statement:
+    ( FunctionCall | Condition | Iteration )
+;
+
+FunctionCall:
+    (ListPaths | FindNode | AddFirewall | AddFilteringRules |
+    AddDnsPolicy | AddNetworkMonitor | MoveNode | AddHoneypot |
+    Execute | Shutdown | Isolate | EnforceSecurityPolicies)
+;
+
+// the elseStatements block can be void thus containing 0 statements, hence the usage of the *= operator instead of the +=
+Condition:
+    'if' (notClause?='not') conditionExpression=VarReferenceOrString //  (notClause?='not') has the same operational behavior of (notClause?='not')?
+        ifStatements+=Statement
+    ('else')?
+        elseStatements*=Statement
+    'endif'
+;
+
+Iteration:
+    'iterate_on' iterationExpression=VarReference
+        statements+=Statement
+    'enditeration'
+;
+
+// the order of the "from" and "to" arguments is not binding, this is guaranteed by the ()# rule
+ListPaths:
+    'list_paths'
+    (('from' sourceExpression=VarReferenceOrString)
+    ('to' destinationExpression=VarReferenceOrString))#
+;
+
+FindNode:
+    'find_node'
+    (('of type' nodeTypeExpression=VarReferenceOrString)
+    ('in' networkPathExpression=VarReferenceOrString)
+    ('with' nodeCapabilityExpression=VarReferenceOrString)?)# // here the ? is used to specify the "with" argument as optional
+;
+
+AddFirewall:
+    'add_firewall'
+    (('behind' impactedNodeExpression=VarReferenceOrString)
+    ('in' networkPathExpression=VarReferenceOrString)
+    ('with' filteringCapabilitiesExpression=VarReferenceOrString)?)# // here the ? is used to specify the "with" argument as optional
+;
+
+AddFilteringRules:
+    'add_filtering_rules' filteringRulesExpression=VarReference
+    'to' nodeExpression=VarReferenceOrString
+;
+
+EnforceSecurityPolicies:
+    'enforce_security_policies' securityPoliciesExpression=VarReference
+    'on' nodeExpression=VarReferenceOrString
+;
+
+AddDnsPolicy:
+    'add_dns_policy'
+    (('for' domainExpression=VarReferenceOrString)
+    ('of type' policyTypeExpression=VarReferenceOrString))#
+;
+
+AddNetworkMonitor:
+    'add_network_monitor'
+    (('behind' impactedNodeExpression=VarReferenceOrString)
+    ('in' networkPathExpression=VarReferenceOrString))#
+;
+
+MoveNode:
+    'move'
+    (nodeExpression=VarReferenceOrString
+    ('to' subnetExpression=VarReferenceOrString))#
+;
+
+AddHoneypot:
+    'add_honeypot' 'with' vulnerabilityExpression=VarReferenceOrString
+;
+
+Execute:
+    'execute' functionExpression=VarReferenceOrString
+;
+
+Shutdown:
+    'shutdown' nodeExpression=VarReferenceOrString
+;
+
+Isolate:
+    'isolate' nodeExpression=VarReferenceOrString
+;
+
+Comment:
+  /#.*$/
+;
+
+//Assignment:
+//    var=ID '=' expr=ID
+//;

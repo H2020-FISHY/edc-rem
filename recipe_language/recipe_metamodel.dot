@@ -1,0 +1,106 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4353082368[ label="{Recipe|}"]
+
+4353080848[ label="{VarReference|value: ID\l}"]
+
+4353076320[ label="{VarReferenceOrString|value: OBJECT\l}"]
+
+4695847824[ label="{*Statement|}"]
+
+4695851232[ label="{*FunctionCall|}"]
+
+4353085408[ label="{Condition|notClause: optional\<BOOL\>\l}"]
+
+4353083888[ label="{Iteration|}"]
+
+4353086352[ label="{ListPaths|}"]
+
+4353087872[ label="{FindNode|}"]
+
+4352703088[ label="{AddFirewall|}"]
+
+4352875824[ label="{AddFilteringRules|}"]
+
+4352954544[ label="{EnforceSecurityPolicies|}"]
+
+4352972080[ label="{AddDnsPolicy|}"]
+
+4334719424[ label="{AddNetworkMonitor|}"]
+
+4352888512[ label="{MoveNode|}"]
+
+4352886144[ label="{AddHoneypot|}"]
+
+4352959392[ label="{Execute|}"]
+
+4352969504[ label="{Shutdown|}"]
+
+4352964800[ label="{Isolate|}"]
+
+
+
+4353082368 -> 4695847824[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+4695690896[ label="{*OBJECT|}"]
+
+4695847824 -> 4695851232 [dir=back]
+4695847824 -> 4353085408 [dir=back]
+4695847824 -> 4353083888 [dir=back]
+4695851232 -> 4353086352 [dir=back]
+4695851232 -> 4353087872 [dir=back]
+4695851232 -> 4352703088 [dir=back]
+4695851232 -> 4352875824 [dir=back]
+4695851232 -> 4352972080 [dir=back]
+4695851232 -> 4334719424 [dir=back]
+4695851232 -> 4352888512 [dir=back]
+4695851232 -> 4352886144 [dir=back]
+4695851232 -> 4352959392 [dir=back]
+4695851232 -> 4352969504 [dir=back]
+4695851232 -> 4352964800 [dir=back]
+4695851232 -> 4352954544 [dir=back]
+4353085408 -> 4353076320[arrowtail=diamond, dir=both, headlabel="conditionExpression "]
+4353085408 -> 4695847824[arrowtail=diamond, dir=both, headlabel="ifStatements 1..*"]
+4353085408 -> 4695847824[arrowtail=diamond, dir=both, headlabel="elseStatements 0..*"]
+4353083888 -> 4353080848[arrowtail=diamond, dir=both, headlabel="iterationExpression "]
+4353083888 -> 4695847824[arrowtail=diamond, dir=both, headlabel="statements 1..*"]
+4353086352 -> 4353076320[arrowtail=diamond, dir=both, headlabel="sourceExpression "]
+4353086352 -> 4353076320[arrowtail=diamond, dir=both, headlabel="destinationExpression "]
+4353087872 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeTypeExpression "]
+4353087872 -> 4353076320[arrowtail=diamond, dir=both, headlabel="networkPathExpression "]
+4353087872 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeCapabilityExpression "]
+4352703088 -> 4353076320[arrowtail=diamond, dir=both, headlabel="impactedNodeExpression "]
+4352703088 -> 4353076320[arrowtail=diamond, dir=both, headlabel="networkPathExpression "]
+4352703088 -> 4353076320[arrowtail=diamond, dir=both, headlabel="filteringCapabilitiesExpression "]
+4352875824 -> 4353080848[arrowtail=diamond, dir=both, headlabel="filteringRulesExpression "]
+4352875824 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeExpression "]
+4352954544 -> 4353080848[arrowtail=diamond, dir=both, headlabel="securityPoliciesExpression "]
+4352954544 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeExpression "]
+4352972080 -> 4353076320[arrowtail=diamond, dir=both, headlabel="domainExpression "]
+4352972080 -> 4353076320[arrowtail=diamond, dir=both, headlabel="policyTypeExpression "]
+4334719424 -> 4353076320[arrowtail=diamond, dir=both, headlabel="impactedNodeExpression "]
+4334719424 -> 4353076320[arrowtail=diamond, dir=both, headlabel="networkPathExpression "]
+4352888512 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeExpression "]
+4352888512 -> 4353076320[arrowtail=diamond, dir=both, headlabel="subnetExpression "]
+4352886144 -> 4353076320[arrowtail=diamond, dir=both, headlabel="vulnerabilityExpression "]
+4352959392 -> 4353076320[arrowtail=diamond, dir=both, headlabel="functionExpression "]
+4352969504 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeExpression "]
+4352964800 -> 4353076320[arrowtail=diamond, dir=both, headlabel="nodeExpression "]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>Comment</b></td><td>#.*$</td>
+	</tr>
+</table> >]
+
+
+}

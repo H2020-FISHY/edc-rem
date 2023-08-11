@@ -1,0 +1,8 @@
+list_paths from impacted_host_ip to 'attacker'
+iterate_on path_list
+    find_node of type 'firewall' in iteration_element with 'level_7_filtering'
+    if not found
+        add_firewall behind 'impacted_host_ip' in iteration_element with 'level_7_filtering'
+        add_filtering_rules rules_level_7 to new_node
+    endif
+enditeration

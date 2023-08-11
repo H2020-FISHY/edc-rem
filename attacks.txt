@@ -1,0 +1,57 @@
+################################### SONAE Pilot ###################################
+
+- Brute Force Attack (XL-SIEM alarm - > we should add the user name identification
+                                    - > RAE raising alarm (we need to check the risk analysis because it was not calculating correctly the overall risk)
+                                    - > EDC suggesting to block IP or user… at least the user :))
+
+- Malicious URL (XL-SIEM alarm - > not detecting the way it was being done by Eurico, I recall that what was decided was:
+If the http request registered in log of the SAP Web dispatcher server do not include one of the following strings in the URL path
+1/HttpAdapter/
+2/XISOAPAdapter/
+3/RESTAdapter/
+4/AS2/
+5/AdapterMessageMonitoring/basic
+6/AdapterFramework/ChannelAdminServlet
+Or if it is an access to an administration URL that does not come from an internal network – meaning, that has different Ips from the following list – then it a potential exploit attempt:
+              10.13.xxx.xxx
+              10.208.xxx.xxx
+              10.36.xxx.xxx
+              10.30.xxx.xxx
+              10.31.xxx.xxx
+Then RAE raising alarm (here what part of the risk analysis should be raised?) - > EDC suggesting to block IP (via IRO)
+
+- Denial of service (XL-SIEM alarm - > RAE raising alarm (again, check the risk analysis in this case) - > EDC suggesting to block IP (via IRO)
+
+- Unauthorized access - > EDC suggesting to block mac address (via IRO)
+
+###################################
+
+Brute force attack
+
+- Block malicious user
+- Block ip and port
+- ecc
+
+Denial of service
+
+- Block ip and port
+- ecc
+
+Unauthorized access to admin pages
+
+- Block MAC address
+- Ecc
+
+Malicious url
+
+- Block IP and port
+- Ecc
+
+################################### F2F Pilot ###################################
+
+- WID attack -> WID ban
+- DID attack -> DID ban
+- DDoS attack -> IP ban (con e senza porta)
+- brute force attack -> IP ban (senza porta)
+
+

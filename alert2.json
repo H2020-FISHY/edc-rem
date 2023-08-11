@@ -1,0 +1,7 @@
+{
+    "AnomalyDetectionSyslog": "Mar  4 18:02:01 mail HORDE: Guest user is not authorized for Horde (Host: 192.168.10.81). [pid 6554 on line 324 of \"/usr/share/php/Horde/Registry.php\"]\n",
+    "Threat_Label": "unknown",
+    "Threat_Name": "unauthorized_access",
+    "Classification_Confidence": 0.7760743154979772,
+    "Outlier_Score": -0.6879292348025954
+}

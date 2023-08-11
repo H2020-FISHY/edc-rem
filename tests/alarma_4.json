@@ -1,0 +1,10 @@
+{
+    "id": "d3252e0f-95ad-484f-8179-3b9eebcb8c78",
+    "device_product": "XL-SIEM",
+    "device_version": "1.0",
+    "event_name": "Brute force",
+    "device_event_class_id": "Unknown",
+    "severity": "5",
+    "extensions_list": "{\"ts\": \"2023-06-19 09:10:07\", \"id\": \"ee10262a4e574a44a46723f5d3168557\", \"relEvents\": \"[0e8011eea01e0242ac1100033f218a6e; 0e8011eea01e0242ac1100033f5ec96a; 0e 8011eea01e0242ac1100033f946f66]\", \"pluginId\": \"70000\", \"pluginName\": \"cyber-monitor\", \"pluginSid\": \"100102\", \"backlogId\": \"732b00ad445444f687d85312d81f0054\", \"src\": \"0.0.0.0\", \"spt\": \"0\", \"shost\": \"00000000\", \"smac\": \"UmVzcG9uc2UgY29kZTogNDAx\", \"suser\": \"TWFjaGluZTogc3J2cHQ1MjEgd2Rpc3A=\", \"dst\": \"0.0.0.0\", \"dpt\": \"0\", \"dhost\": \"00000000\", \"sidName\": \"QnJ1dGUgZm9yY2U=\", \"risk\": \"8\", \"reliability\": \"8\", \"proto\": \"6\", \"description\": \"Brute force\", \"userData1\": \"TWV0aG9kOiBHRVQ=\", \"userData2\": \"TmV0OiAxOTUuMjM=\", \"userData3\": \"UmVxdWVzdDogSFRUUC8xLjE=\", \"userData4\": \"UmVzcG9uc2UgY29kZTogNDAx\", \"userData5\": \"U2l6ZTogMTcx\", \"userData6\": \"TWFjaGluZTogc3J2cHQ1MjEgd2Rpc3A=\", \"userData7\": \"TWVzc2FnZTogL1JFU1RBZGFwdGVyL2hlbGxv\", \"userData8\": \"SONAE\", \"userData9\": \"Brute force\"}",
+    "pilot": "WBP"
+}

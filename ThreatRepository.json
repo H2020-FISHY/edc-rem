@@ -1,0 +1,302 @@
+{
+    "Threats": {
+        "unauthorized_access": {
+            "unknown": {
+                "rules": [],
+                "recipes": [
+                    {
+                        "recipeName": "fbm_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    }
+                ]
+            }
+        },
+        "malware": {
+            "Cridex": {
+                "rules": [{
+                    "level": 7,
+                    "proto": "HTTP",
+                    "payload": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBi QKBgQCvR7x8oHW63g45dwL84Xyga4jdsEUyYc9taOLTZ+kEhwauB7UbvXliNZZsq1HzsNgz+Ge7j VT2nyBIvDwx6CozX0iNM2QG7ZalwB6zBVyvpg TNTQqE8ODZrDGIkabg4OT3YeRrux4Z8GZ14Jja /jITSQZBMvsWguP/wFpUJ35v2wIDAQAB"
+                }],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "filter_payload_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 10,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 9,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "monitor_traffic_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    },
+                    {
+                        "recipeName": "add_honeypot_recipe",
+                        "priority": 7,
+                        "impact": 2
+                    },
+                    {
+                        "recipeName": "put_into_reconfiguration_recipe",
+                        "priority":11,
+                        "impact": 8
+                    },
+                    {
+                        "recipeName": "isolate_recipe",
+                        "priority": 5,
+                        "impact": 9
+                    },
+                    {
+                        "recipeName": "shutdown_recipe",
+                        "priority": 4,
+                        "impact": 10
+                    }
+                ]
+            },
+            "Zeus": {
+                "rules": [{
+                    "level": 4,
+                    "proto": "TCP",
+                    "c2serversIP": "43.234.233.2"
+                },{
+                    "level": 4,
+                    "proto": "TCP",
+                    "c2serversIP": "1.2.3.4"
+                },{
+                    "level": 4,
+                    "proto": "TCP",
+                    "c2serversIP": "2.3.4.5"
+                }],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "filter_ip_port_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 10,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 9,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "monitor_traffic_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    },
+                    {
+                        "recipeName": "add_honeypot_recipe",
+                        "priority": 7,
+                        "impact": 2
+                    },
+                    {
+                        "recipeName": "put_into_reconfiguration_recipe",
+                        "priority": 6,
+                        "impact": 8
+                    },
+                    {
+                        "recipeName": "isolate_recipe",
+                        "priority": 5,
+                        "impact": 9
+                    },
+                    {
+                        "recipeName": "shutdown_recipe",
+                        "priority": 4,
+                        "impact": 10
+                    }
+                ]
+            },
+            "Neptune": {
+                "rules": [{
+                    "level": 7,
+                    "proto": "DNS",
+                    "domain": "dns.olympus.com"
+                },{
+                    "level": 7,
+                    "proto": "DNS",
+                    "domain": "12.hjlk.com"
+                },{
+                    "level": 7,
+                    "proto": "DNS",
+                    "domain": "13.hjlk.com"
+                }],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "redirect_domains_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 10,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 9,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "monitor_traffic_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    },
+                    {
+                        "recipeName": "add_honeypot_recipe",
+                        "priority": 7,
+                        "impact": 2
+                    },
+                    {
+                        "recipeName": "put_into_reconfiguration_recipe",
+                        "priority": 6,
+                        "impact": 8
+                    },
+                    {
+                        "recipeName": "isolate_recipe",
+                        "priority": 5,
+                        "impact": 9
+                    },
+                    {
+                        "recipeName": "shutdown_recipe",
+                        "priority": 4,
+                        "impact": 10
+                    }
+                ]
+            },
+            "command_control": {
+                "rules": [],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "filter_ip_port_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 10,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 9,
+                        "impact": 3
+                    },
+                    {
+                        "recipeName": "monitor_traffic_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    },
+                    {
+                        "recipeName": "add_honeypot_recipe",
+                        "priority": 7,
+                        "impact": 2
+                    },
+                    {
+                        "recipeName": "put_into_reconfiguration_recipe",
+                        "priority": 6,
+                        "impact": 8
+                    },
+                    {
+                        "recipeName": "isolate_recipe",
+                        "priority": 5,
+                        "impact": 9
+                    },
+                    {
+                        "recipeName": "shutdown_recipe",
+                        "priority": 4,
+                        "impact": 10
+                    }
+                ]
+            },
+            "Malicious URL": {
+                "rules": [],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "filter_ip_port_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 10,
+                        "impact": 5
+                    },
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 9,
+                        "impact": 5
+                    },
+                    {
+                        "recipeName": "redirect_domains_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    }
+                ]
+            },
+            "Denial of service": {
+                "rules": [],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "filter_ip_port_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 10,
+                        "impact": 5
+                    },
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 9,
+                        "impact": 5
+                    },
+                    {
+                        "recipeName": "monitor_traffic_recipe",
+                        "priority": 8,
+                        "impact": 1
+                    }
+                ]
+            },
+            "Brute force": {
+                "rules": [],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "filter_ip_port_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "filter_ip_port_recipe",
+                        "priority": 10,
+                        "impact": 5
+                    },
+                    {
+                        "recipeName": "block_malicious_user",
+                        "priority": 9,
+                        "impact": 2
+                    },
+                    {
+                        "recipeName": "put_into_reconfiguration_recipe",
+                        "priority": 8,
+                        "impact": 8
+                    }
+                ]
+            },
+            "Unauthorized access to admin pages": {
+                "rules": [],
+                "_comment": "the key suggestedRecipe is present only for retro compatibility with prepareDataForRemediation() function, use priorities in the recipe list in the future",
+                "suggestedRecipe": "block_mac_address_recipe",
+                "recipes": [
+                    {
+                        "recipeName": "block_mac_address_recipe",
+                        "priority": 10,
+                        "impact": 5
+                    },
+                    {
+                        "recipeName": "filter_payload_recipe",
+                        "priority": 9,
+                        "impact": 2
+                    },
+                    {
+                        "recipeName": "monitorr_traffic_recipe",
+                        "priority": 8,
+                        "impact": 8
+                    }
+                ]
+            }
+        }
+    }
+}

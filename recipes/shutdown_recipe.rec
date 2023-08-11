@@ -1,0 +1,3 @@
+iterate_on impacted_nodes
+    shutdown iteration_element
+enditeration

@@ -1,0 +1,20 @@
+{
+    "Threat_Finding": {
+      "Time_Start": "2021-06-03 01:32:07",
+      "Time_End": "2021-06-03 03:41:22",
+      "Time_Duration": 7755.566,
+      "Source_Address": "10.1.0.10",
+      "Destination_Address": "54.154.132.12",
+      "Source_Port": 4897,
+      "Destination_Port": 22,
+      "Protocol": "TCP",
+      "Flag": "...A.R..",
+      "Soure_tos": 0,
+      "Input_packets": 6,
+      "Input_bytes": 276
+    },
+    "Threat_Label": "Cridex",
+    "Threat_Name": "malware",
+    "Classification_Confidence": 0.92,
+    "Outlier_Score": -0.5
+}

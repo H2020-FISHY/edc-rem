@@ -1,0 +1,71 @@
+{
+    "AlarmEvent": {
+        "DST_IP_HOSTNAME": "00000000",
+        "RELATED_EVENTS": "[24c211ebb21a0242ac1100029d1ce816]",
+        "DST_IP": "00.000.000.000",
+        "PLUGIN_NAME": "cyber-monitor",
+        "SRC_IP": "000.000.000.0",
+        "PRIORITY": 5,
+        "RELIABILITY": 10,
+        "SUBCATEGORY": "Attacks",
+        "USERDATA3": "",
+        "USERDATA4": "",
+        "PLUGIN_SID": "4",
+        "USERDATA1": "",
+        "USERDATA2": "",
+        "ORGANIZATION": "LIBER",
+        "CATEGORY": "Alarm",
+        "PLUGIN_ID": "70000",
+        "USERNAME": "",
+        "FILENAME": "",
+        "BACKLOG_ID": "bbb79e5143fa4b7ba4edbf5d2a4126b0",
+        "RELATED_EVENTS_INFO": {
+            "a": {
+                "date": "1605170383",
+                "plugin_id": 1001,
+                "log": "IjExLzEyLzIwMjAtMDg6Mzk6NDMuNzAzOTgxICBbKipdIFsxOjIyNjAwMDM6MV0gU1VSSUNBVEEgQXBwbGF5ZXIgUHJvdG9jb2wgZGV0ZWN0aW9uIHNraXBwZWQgWyoqXSBbQ2xhc3NpZmljYXRpb246IEdlbmVyaWMgUHJvdG9jb2wgQ29tbWFuZCBEZWNvZGVdIFtQcmlvcml0eTogM10ge1RDUH0gMTkyLjE2OC4xODAuODo2NDk5MyAtPiA4NS4xMzYuMTIxLjE2Njo5OTk5ICI=",
+                "interface": "eth0",
+                "dst_ip": "00.000.000.000",
+                "src_ip": "000.000.000.0",
+                "userdata7": null,
+                "fdate": "2020-11-12 08:39:43",
+                "userdata8": null,
+                "userdata5": null,
+                "userdata6": null,
+                "userdata9": null,
+                "userdata3": null,
+                "userdata4": null,
+                "userdata1": null,
+                "userdata2": null,
+                "src_port": 64993,
+                "plugin_sid": 2260003,
+                "event_id": "24c211ebb21a0242ac1100029d1ce816",
+                "filename": null,
+                "organization": "LIBER",
+                "dst_port": 9999,
+                "tzone": null,
+                "device": "85.152.194.5",
+                "username": null
+            }
+        },
+        "PROTOCOL": 6,
+        "RISK": 10,
+        "SRC_PORT": 64993,
+        "SENSOR": "4A0088008E015E631745073B78276BDE",
+        "SRC_IP_HOSTNAME": "00000000",
+        "SID_NAME": "DoS",
+        "USERDATA7": "",
+        "DATE": "2020-11-12 08:39:43",
+        "USERDATA8": "SONAE",
+        "USERDATA5": "",
+        "USERDATA6": "",
+        "PASSWORD": "",
+        "USERDATA9": "",
+        "DST_PORT": 9999,
+        "EVENT_ID": "c36fdaa0fdf14f9c88d9e99cd5be4dc0"
+    }
+}
+
+ "1) Filter ip and port on impacted node\n"
+ "2) Filter payload on impacted node\n"
+ "3) Monitor traffic on impacted node\n"
